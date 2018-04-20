@@ -12,6 +12,14 @@ Include after Leaflet & jQuery:
 <script src="lib/tmn.js"></script>
 ```
 
+
+### Example
+[view map into div with legend](https://pa69pa.github.io/tmn/legend.html)
+[view full-window maps with preset runlay](https://pa69pa.github.io/tmn/fullWin.html)
+
+and see using it on site [www.greendom.space](http://greendom.space)
+
+
 ### License
 MIT
 
