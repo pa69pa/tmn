@@ -11,9 +11,9 @@ Include after Leaflet & jQuery:
 <script src="https://pa69pa.github.io/ee/lib/can.min.js"></script>
 <script src="lib/tmn.js"></script>
 ```
+## API
 
-
-### Example
+## Example
 * [view map into div with legend](https://pa69pa.github.io/tmn/legend.html)
 * [view full-window maps with preset runlay](https://pa69pa.github.io/tmn/fullWin.html)
 
