@@ -11,7 +11,6 @@ Include after Leaflet & jQuery:
 <script src="https://pa69pa.github.io/ee/lib/can.min.js"></script>
 <script src="lib/tmn.js"></script>
 ```
-## API
 
 ## Example
 * [view map into div with legend](https://pa69pa.github.io/tmn/legend.html)
@@ -19,10 +18,26 @@ Include after Leaflet & jQuery:
 
 and see using it on site [www.greendom.space](http://greendom.space)
 
+## API
 
-### License
-MIT
+### init
 
-### Contributions
+### icons & hits
+Two arrays of predefined settings. Show all zoo or one:
+```
+console.log( tmn.icons() )
+console.log( tmn.icons().x )
+```
+Before init we can change this set. Ex:
+```
+tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
+```
+
+
+### can.js
+Service function scripts. Is in [ee](https://github.com/pa69pa/ee) git-repository. Needed for localisation, work with cookies, fonts and other.
+
+## Contributions
+* License MIT
 * Browser and device compatibility testing is very limited
 * Bug reports and pull requests are welcome!
