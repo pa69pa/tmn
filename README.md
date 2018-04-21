@@ -26,6 +26,7 @@ and see using it on site [www.greendom.space](http://greendom.space)
 Two arrays of predefined settings. Show all zoo or one:
 ```
 console.log( tmn.icons() )
+console.log( tmn.hits() )
 console.log( tmn.icons().x )
 ```
 Before init we can change this set. Ex:
@@ -38,6 +39,6 @@ tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
 Service function scripts. Is in [ee](https://github.com/pa69pa/ee) git-repository. Needed for localisation, work with cookies, fonts and other.
 
 ## Contributions
-* License MIT
+* License `MIT`
 * Browser and device compatibility testing is very limited
 * Bug reports and pull requests are welcome!
