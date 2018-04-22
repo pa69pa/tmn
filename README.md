@@ -19,8 +19,7 @@ Include after Leaflet & jQuery:
 and see using it on site [www.greendom.space](http://greendom.space)
 
 ## API
-
-### init
+The script *tmn.js* will set global variable **tmn**
 
 ### icons & hits
 Two arrays of predefined settings. Show all zoo or one:
@@ -33,7 +32,13 @@ Before init we can change this set. Ex:
 ```
 tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
 ```
+**icons**
+|x<br>play|"&#xE5CD;"<br>"&#xE037;"|codes of symbols from *Material Icons* from *Google* — see next chapter **can.js**|
+|circle|svg image tags|for paint icons in map legends|
+|legend_select_color|'rgba(96, 152, 205, 0.9)'|color vfor selected item into map legend|
 
+
+### init
 
 ### can.js
 Service function scripts. Is in [ee](https://github.com/pa69pa/ee) git-repository. Needed for localisation, work with cookies, fonts and other.
