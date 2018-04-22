@@ -12,16 +12,16 @@ Include after Leaflet & jQuery:
 <script src="lib/tmn.js"></script>
 ```
 
-## Example
+# Example
 * [view map into div with legend](https://pa69pa.github.io/tmn/legend.html)
 * [view full-window maps with preset runlay](https://pa69pa.github.io/tmn/fullWin.html)
 
 and see using it on site [www.greendom.space](http://greendom.space)
 
-## API
+# API
 The script *tmn.js* will set global variable **tmn**
 
-### icons & hits
+## icons & hits
 Two objects-arrays of predefined settings. Show all zoo or one:
 ```
 console.log( tmn.icons() )
@@ -47,12 +47,12 @@ object **hits**
 |zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see chapter **markers**|
 |zooLegIcon|[[13,3],[14,2]]|zoom<14 => size icon becomes half as much; zoom<13 => three times less (enumerate the zoom in ascending order)|
 
-### init
+## init
 
-### can.js
+## can.js
 Service function scripts. Is in [ee](https://github.com/pa69pa/ee) git-repository. Needed for localisation, work with cookies, fonts and other.
 
-## Contributions
+# Contributions
 * License `MIT`
 * Browser and device compatibility testing is very limited
 * Bug reports and pull requests are welcome!
