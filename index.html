@@ -9,7 +9,10 @@
   crossorigin="anonymous"></script>
 <script src="https://pa69pa.github.io/ee/lib/can.min.js"></script>
 <script src="lib/tmn.js"></script>
-<style>h2{color:#560011}</style>
+<style>
+  h2{color:#560011}
+  .f td{font-style:italic;font-size:90%;text-align:center}
+</style>
 
 
 <h2>TerraMadNess</h2>
@@ -25,16 +28,16 @@
 <br>
 <i>objects of predefined settings:</i>
 <h3>tmn.icons()</h3>
-<table id="ic" border=1 cellspacing=0><tr><td><i>key</i></td><td><i>value</i></td></tr>
+<table id="ic" border=1 cellspacing=0 cellpadding=3><tr class='f'><td>key</td><td><i>value</i></td></tr>
 </table>
 <h3>tmn.hits()</h3>
-<table id="hi" border=1 cellspacing=0><tr><td><i>key</i></td><td><i>value</i></td></tr>
+<table id="hi" border=1 cellspacing=0 cellpadding=3><tr class='f'><td><i>key</i></td><td><i>value</i></td></tr>
 </table>
 <br>
 <script>
   function r(a,t){
     $.each(a,function(k,v){
-      $('<tr><td>'+k+'</td><td>'+v+'</td></tr>').appendTo(t)
+      $('<tr><td>'+k+'</td><td>'+v.toString()+'</td></tr>').appendTo(t)
     })
   }
   r(tmn.icons(),$('#ic'));
