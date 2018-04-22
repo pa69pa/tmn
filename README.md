@@ -33,6 +33,7 @@ Before init we can change this set. Ex:
 tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
 ```
 **icons**
+
 |key|value|desc|
 |--|------|----|
 |x<br>play|"&#xE5CD;"<br>"&#xE037;"|codes of symbols from *Material Icons* from *Google* — see next chapter **can.js**|
