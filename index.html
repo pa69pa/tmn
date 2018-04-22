@@ -25,16 +25,16 @@
 <br>
 <i>objects of predefined settings:</i>
 <h3>tmn.icons()</h3>
-<table id="ic" border=1><tr><td><i>key</i></td><td><i>value</i></td></tr>
+<table id="ic" border=1 cellspacing=0><tr><td><i>key</i></td><td><i>value</i></td></tr>
 </table>
 <h3>tmn.hits()</h3>
-<table id="hi" border=1><tr><td><i>key</i></td><td><i>value</i></td></tr>
+<table id="hi" border=1 cellspacing=0><tr><td><i>key</i></td><td><i>value</i></td></tr>
 </table>
 <br>
 <script>
   function r(a,t){
     $.each(a,function(k,v){
-      $('<tr><td>'+k+'</td><td><code>'+v+'</code></td></tr>').appendTo(t)
+      $('<tr><td>'+k+'</td><td>'+v+'</td></tr>').appendTo(t)
     })
   }
   r(tmn.icons(),$('#ic'));
