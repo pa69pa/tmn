@@ -32,14 +32,19 @@ Before init we can change this set. Ex:
 ```
 tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
 ```
-**icons**
+object **icons**
 
 |key|value|desc|
 |--|------|----|
-|x<br>play|"&#xE5CD;"<br>"&#xE037;"|codes of symbols from *Material Icons* from *Google* — see next chapter **can.js**|
-|circle|svg image tags|for paint icons in map legends|
-|legend_select_color|'rgba(96, 152, 205, 0.9)'|color vfor selected item into map legend|
+|x<br>play|"&amp;#xE5CD;"<br>"&amp;#xE037;"|codes of symbols *Material Icons font* from *Google* for buttons «close» and «play» — see next chapter **can.js**|
+|circle<br>rectangle<br>polygon<br>anyline|svg image tags|for paint icons in map legends|
+|legend_select_color|'rgba(96, 152, 205, 0.9)'|color for selected item into map legend|
 
+object **hits**
+|key|value|desc|
+|--|------|----|
+|zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see in next chapter **markers**|
+|zooLegIcon|[[13,3],[14,2]]|zoom<14 => size icon becomes half as much; zoom<13 => three times less (enumerate the zoom in ascending order)|
 
 ### init
 
