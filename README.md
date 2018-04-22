@@ -26,8 +26,10 @@ Two objects-arrays of predefined settings. Show all zoo or one:
 ```
 console.log( tmn.icons() )
 console.log( tmn.hits() )
-console.log( tmn.icons().x ) —— see run it [here](https://pa69pa.github.io/tmn)
+console.log( tmn.icons().x )
 ```
+— see run it [here](https://pa69pa.github.io/tmn)
+
 Before init we can change this set. Ex:
 ```
 tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
