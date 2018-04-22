@@ -36,15 +36,15 @@ object **icons**
 
 |key|value|desc|
 |--|------|----|
-|x<br>play|"&amp;#xE5CD;"<br>"&amp;#xE037;"|codes of symbols *Material Icons font* from *Google* for buttons «close» and «play» — see next chapter **can.js**|
+|x<br>play|"&amp;#xE5CD;"<br>"&amp;#xE037;"|codes of symbols *Material Icons font* from *Google* for buttons «close» and «play» — see chapter **can.js**|
 |circle<br>rectangle<br>polygon<br>anyline|svg image tags|for paint icons in map legends|
-|legend_select_color|'rgba(96, 152, 205, 0.9)'|color for selected item into map legend (string as output command *$('div').css('background-color')*)|
+|legend_select_color|'rgba(96, 152, 205, 0.9)'|color for selected item into map legend = string as output command *$('div').css('background-color')*|
 
 object **hits**
 
 |key|value|desc|
 |--|------|----|
-|zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see in next chapter **markers**|
+|zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see chapter **markers**|
 |zooLegIcon|[[13,3],[14,2]]|zoom<14 => size icon becomes half as much; zoom<13 => three times less (enumerate the zoom in ascending order)|
 
 ### init
