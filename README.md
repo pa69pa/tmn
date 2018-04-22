@@ -38,9 +38,10 @@ object **icons**
 |--|------|----|
 |x<br>play|"&amp;#xE5CD;"<br>"&amp;#xE037;"|codes of symbols *Material Icons font* from *Google* for buttons «close» and «play» — see next chapter **can.js**|
 |circle<br>rectangle<br>polygon<br>anyline|svg image tags|for paint icons in map legends|
-|legend_select_color|'rgba(96, 152, 205, 0.9)'|color for selected item into map legend|
+|legend_select_color|'rgba(96, 152, 205, 0.9)'|color for selected item into map legend (string as output command *$('div').css('background-color')*)|
 
 object **hits**
+
 |key|value|desc|
 |--|------|----|
 |zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see in next chapter **markers**|
