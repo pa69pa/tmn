@@ -28,10 +28,10 @@
 <br>
 <i>objects of predefined settings:</i>
 <h3>tmn.icons()</h3>
-<table id="ic" border=1 cellspacing=0 cellpadding=3><tr class='f'><td>key</td><td><i>value</i></td></tr>
+<table id="ic" border=1 cellspacing=0 cellpadding=3><tr class='f'><td>key</td><td>value</td><td>show</td></tr>
 </table>
 <h3>tmn.hits()</h3>
-<table id="hi" border=1 cellspacing=0 cellpadding=3><tr class='f'><td><i>key</i></td><td><i>value</i></td></tr>
+<table id="hi" border=1 cellspacing=0 cellpadding=3><tr class='f'><td>key</td><td>value</td></tr>
 </table>
 <br>
 <script>
@@ -40,7 +40,9 @@
     $.each(a,function(k,v){
       if($.isArray(v))s=JSON.stringify(v);
       else{
-        s=v
+        s=v.substr(0,1)
+        if(v=='&')s='&amp;'+v.substring(1)+'</td><td class="mico">'+v;
+        else s=v
       }
       $('<tr><td>'+k+'</td><td>'+s+'</td></tr>').appendTo(t)
     })
