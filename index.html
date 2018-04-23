@@ -35,14 +35,18 @@
 </table>
 <br>
 <script>
+  getMNFontIcons();
   function r(a,t){
     var s;
     $.each(a,function(k,v){
       if($.isArray(v))s=JSON.stringify(v);
       else{
-        s=v.toString()
-        if(v.indexOf('&')==0)s='&amp;'+v.substring(1)+'</td><td class="mico">'+v;
-        else s=v
+        try{
+         if(v.indexOf('&')==0)s='&amp;'+v.substring(1)+'</td><td><i class="mico">'+v+'</i>';
+         if(v.indexOf('<')==0)s='&lt;'+v.substring(1)+'</td><td>'+v;
+        }cath(er){
+         s=v
+        }
       }
       $('<tr><td>'+k+'</td><td>'+s+'</td></tr>').appendTo(t)
     })
