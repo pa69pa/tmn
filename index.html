@@ -43,8 +43,11 @@
       else{
         try{
          if(v.indexOf('&')==0)s='&amp;'+v.substring(1)+'</td><td><i class="mico">'+v+'</i>';
-         if(v.indexOf('<')==0)s='&lt;'+v.substring(1)+'</td><td>'+v;
-        }cath(er){
+         else{
+           if(v.indexOf('<')==0)s='&lt;'+v.substring(1)+'</td><td>'+v;
+           else{s=v}
+         }
+        }catch(er){
          s=v
         }
       }
