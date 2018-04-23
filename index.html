@@ -40,8 +40,8 @@
     $.each(a,function(k,v){
       if($.isArray(v))s=JSON.stringify(v);
       else{
-        s=v.substring(0,1);console.log('s=',s)
-        if(v=='&')s='&amp;'+v.substring(1)+'</td><td class="mico">'+v;
+        s=v.toString()
+        if(v.indexOf('&')==0)s='&amp;'+v.substring(1)+'</td><td class="mico">'+v;
         else s=v
       }
       $('<tr><td>'+k+'</td><td>'+s+'</td></tr>').appendTo(t)
