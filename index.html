@@ -40,7 +40,7 @@
     $.each(a,function(k,v){
       if($.isArray(v))s=JSON.stringify(v);
       else{
-        s=v.substr(0,1)
+        s=v.substring(0,1);console.log('s=',s)
         if(v=='&')s='&amp;'+v.substring(1)+'</td><td class="mico">'+v;
         else s=v
       }
