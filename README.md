@@ -54,7 +54,7 @@ object **hits**
 ## can.js
 Service function scripts. It is in [ee](https://github.com/pa69pa/ee) git-repository. It needed for localisation, work with cookies, fonts and other.
 
-If object **tmn.icons()** has value begining with `&` than *can.js* load in background [Material Icons font](https://material.io/icons/). Not all font. Only this characters.
+If object **tmn.icons()** has value begining with `&`, then *can.js* load in background [Material Icons font](https://material.io/icons/). Not all font. Only this characters.
 
 If you replace all lines starting with `&` in the array **icons**, then this font and style `.mico` be loaded will not.
 
