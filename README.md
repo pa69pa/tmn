@@ -57,7 +57,7 @@ First way of init is (second way see in chapter **fullWin**):
 ```
 var myMap = L.map('mapid').setView([51.505, -0.09], 13);
 ```
-2. And after make *tmn.init()* by giving him a **myMap**
+2. And after make *tmn.init()* by giving him **myMap**
 ```
 var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend("my Points");
 ```
@@ -66,6 +66,7 @@ var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend("my Po
 
 second argument for *tmn.init()* can be array-object (not required) — see in chapter **fullWin**
 
+## markers
 
 
 
