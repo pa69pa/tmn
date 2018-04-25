@@ -51,6 +51,8 @@ object **hits**
 
 ## init
 
+First way of init is (second way see in chapter **fullWin**):
+
 ## can.js
 Service function scripts. It is in [ee](https://github.com/pa69pa/ee) git-repository. It needed for localisation, work with cookies, fonts and other.
 
