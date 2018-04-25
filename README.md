@@ -38,7 +38,7 @@ object **icons**
 
 |key|value|desc|
 |--|------|----|
-|x<br>play|"&amp;#xE5CD;"<br>"&amp;#xE037;"|codes of symbols *Material Icons font* from *Google* for buttons «close» and «play» — see chapter [can.js](#can.js)|
+|x<br>play|"&amp;#xE5CD;"<br>"&amp;#xE037;"|codes of symbols *Material Icons font* from *Google* for buttons «close» and «play» — see chapter [can.js](#canjs)|
 |circle<br>rectangle<br>polygon<br>anyline|svg image tags|for paint icons in map legends|
 |legend_select_color|'rgba(96, 152, 205, 0.9)'|color for selected item into map legend = string as output command *$('div').css('background-color')*|
 
@@ -46,12 +46,12 @@ object **hits**
 
 |key|value|desc|
 |--|------|----|
-|zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see chapter **markers**|
+|zoomHiddenLegendIcon|12|with map zoom<12 icon over objects will hide — about it see chapter [markers](#markers)|
 |zooLegIcon|[[13,3],[14,2]]|zoom<14 => size icon becomes half as much; zoom<13 => three times less (enumerate the zoom in ascending order)|
 
 ## init
 
-First way of init is (second way see in chapter **fullWin**):
+First way of init is (second way see in chapter [fullWin](#fullWin)):
 
 1. As usual create map through Leaflet into &lt;div#mapid>
 ```
@@ -61,10 +61,10 @@ var myMap = L.map('mapid').setView([51.505, -0.09], 13);
 ```
 var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend("my Points");
 ```
- — what is *.nav* see in chapter **runlay**<br>
- — what is *.agrLegend* see in chapter **legend**
+ — what is *.nav* see in chapter [runlay](#runlay)<br>
+ — what is *.agrLegend* see in chapter [legend](#legend)
 
-second argument for *tmn.init()* can be array-object (not required) — see in chapter **fullWin**
+second argument for *tmn.init()* can be array-object (not required) — see in chapter [fullWin](#fullWin)
 
 ## markers
 
@@ -111,7 +111,7 @@ Service function scripts. It is in [ee](https://github.com/pa69pa/ee) git-reposi
 
 If object **tmn.icons()** has value begining with `&`, then *can.js* load in background [Material Icons font](https://material.io/icons/). Not all font. Only this characters.
 
-If you replace all lines starting with `&` in the array **icons**, then this font and style `.mico` be loaded will not.
+If you replace all lines starting with `&` in the array **tmn.icons()**, then this font and style `.mico` be loaded will not.
 
 If, on the contrary, you wanted at the same time to add some more number of icons for your own needs, then we list the code of their glyphs after the query in the src script:
 ```
