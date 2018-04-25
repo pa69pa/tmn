@@ -53,7 +53,7 @@ object **hits**
 
 First way of init is (second way see in chapter **fullWin**):
 
-1. As usual create map with Leaflet into &lt;div#mapid>
+1. As usual create map through Leaflet into &lt;div#mapid>
 ```
 var myMap = L.map('mapid').setView([51.505, -0.09], 13);
 ```
@@ -68,6 +68,31 @@ second argument for *tmn.init()* can be array-object (not required) — see in c
 
 ## markers
 
+The Leaflet object *L.Path* is extended by method `.setMarker(L.Marker)`. The goal is to equip objects *L.Polyline*, *L.Polygon*, *L.Rectangle*, *L.Circle* with the ability to have markers\pictures to identify the object on the map and use the same markers in the map legend. Two step:
+
+1. As usual create *L.Marker* with *L.Icon* through Leaflet and add to *L.FeatureGroup*
+```
+var group = L.featureGroup();
+
+var mark = L.marker([51.5, -0.11], {
+  icon: L.icon({
+    iconUrl:'img/cafe.svg', iconSize:[44,44], iconAnchor:[44,44]
+  })
+}).addTo(group);
+```
+
+2. And after during creation *L.Path* make *setMarker()* and add to the same *L.FeatureGroup*. Additional property `legendItem` is item on legend map.
+```
+L.circle([51.5,-0.11], 500, {
+		 color: 'red'
+		,fillColor: '#f03'
+		,fillOpacity: 0.5
+		,legendItem: 'Cafe'
+	}).addTo(group).bindPopup("I am a cafe.").setMarker(mark);
+```
+We can несколько объектов содним именем
+
+[0,0] как координаты маркера
 
 
 ## fullWin
