@@ -53,18 +53,32 @@ object **hits**
 
 First way of init is (second way see in chapter **fullWin**):
 
-As usual create map with Leaflet into &lt;div#mapid>
+1. As usual create map with Leaflet into &lt;div#mapid>
 ```
 var myMap = L.map('mapid').setView([51.505, -0.09], 13);
 ```
-And after make *tmn.init()* by giving him a **myMap**
+2. And after make *tmn.init()* by giving him a **myMap**
 ```
 var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend("my Points");
 ```
- — what is *.nav* see in chapter **runlay**
+ — what is *.nav* see in chapter **runlay**<br>
  — what is *.agrLegend* see in chapter **legend**
 
-second argument for tmn.init() is array-object with^
+second argument for *tmn.init()* can be array-object (not required) — see in chapter **fullWin**
+
+
+
+
+## fullWin
+
+second argument for *tmn.init()* can be array-object with:
+
+|key|default|desc|
+|---|-------|----|
+|funcBefore|none|function run on start show full-win map|
+|funcOnClose|none|function run on close full-win map|
+|anim|'hide'|animation action for show full-win map — on default full-win map manifested from the transparent — with value 'left' or right' full-win map will appear to be pulled out on the left or right|
+
 
 ## can.js
 Service function scripts. It is in [ee](https://github.com/pa69pa/ee) git-repository. It needed for localisation, work with cookies, fonts and other.
