@@ -185,6 +185,8 @@ var myBigGeo = tmn.init(
 ```
 It's create div with style="width:100%;height:100vh" as container and *L.Map* inside. Next you can access the object *L.Map* as `myBigGeo.map`
 
+In first argument-array not needed set key *layers* — create *L.Map* without tile and over layers on load page — will addLayer when show full-win map.
+
 Second argument for *tmn.init()* can be (not required) array-object with:
 
 |key|default|desc|
@@ -192,8 +194,20 @@ Second argument for *tmn.init()* can be (not required) array-object with:
 |funcBefore|none|function run on start show full-win map|
 |funcOnClose|none|function run on close full-win map|
 |anim|'fade'|animation action for show full-win map — on default full-win map manifested from the transparent — with value 'left' or right' full-win map will appear to be pulled out on the left or right|
-|close|null|icon for button close full-win map<br>— default = null (without icon<br> = '[X]' for easy icon
+|close|null|icon for button close full-win map — default = null (without icon)<br> = '[X]' for icon based on *tmn.icons().x*<br> = 'string' for jQuery selector for $('string').click( ... )|
 
+Function *.show()* for show full-win map. You can set jQuery click function on any number of tag:
+```
+ $('h2').click({
+	layers: [grayscale] // leayers for show — first in array is TileLayer, other is Overlays
+	,run: myFunc // JavaScript function for call on click OR L.LayerGroup or L.FeatureGroup for flyToBounds
+ },myBigGeo.show);
+
+ $('#showMeGroup').click({
+	layers: [streets, group]
+	,run: group
+ },myBigGeo.show);
+```
 
 ## can.js
 Service function scripts. It is in [ee](https://github.com/pa69pa/ee) git-repository. It needed for localisation, work with cookies, fonts and other.
