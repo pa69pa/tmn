@@ -117,12 +117,21 @@ var baselay = {
 };
 
 var overlay = {
-    "Group": group // this *L.FeatureGroup* created in chapter [markers](#markers)
+    "Group": group // this L.FeatureGroup created in chapter «markers»
 };
 ```
 2. And can create third object for run functionals and make **.nav()**
 ```
+var runlay = {
+     "go to Group": group
+    ,"start Func": myFunc // any JavaScript function
+};
+
+myGeo.nav(baselay, overlay, runlay);
 ```
+You will have same control with two additional items:
+* "go to Group" — will run myMap.flyToBounds(b) — where b = bounds of the *group* (therefore it is better to use L.FeatureGroup instead of L.LayerGroup)
+* "start Func" —  the specified function will be performed
 
 ## legend
 
