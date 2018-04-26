@@ -69,8 +69,7 @@ second argument for *tmn.init()* can be array-object (not required) — see in c
 object **myGeo** as a result has properties:
 * myGeo.map = L.Map — in this example *myMap*
 * myGeo.div = jQuery object $(div) where map is created — in this example $('#mapid')
-* myGeo.isBase = true/false — current state of the fullWin map
-and others
+* myGeo.isBase = true/false — whether the map is fullWin ...and others
 
 ## markers
 
