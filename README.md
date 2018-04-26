@@ -53,7 +53,7 @@ object **hits**
 
 First way of init is (second way see in chapter [fullWin](#fullWin)):
 
-1. As usual create map through Leaflet into &lt;div#mapid>
+1. As usual create map through `Leaflet` into &lt;div#mapid>
 ```
 var myMap = L.map('mapid').setView([51.505, -0.09], 13);
 ```
@@ -68,9 +68,9 @@ second argument for *tmn.init()* can be array-object (not required) — see in c
 
 ## markers
 
-The Leaflet object *L.Path* is extended by method `.setMarker(L.Marker)`. The goal is to equip objects *L.Polyline*, *L.Polygon*, *L.Rectangle*, *L.Circle* with the ability to have markers\pictures to identify the object on the map and use the same markers in the map legend. Two step:
+The `Leaflet` object *L.Path* is extended by method `.setMarker(L.Marker)`. The goal is to equip objects *L.Polyline*, *L.Polygon*, *L.Rectangle*, *L.Circle* with the ability to have markers\pictures to identify the object on the map and use the same markers in the map legend. Two step:
 
-1. As usual create *L.Marker* with *L.Icon* through Leaflet and add to *L.FeatureGroup*
+1. As usual create *L.Marker* with *L.Icon* through `Leaflet` and add to *L.FeatureGroup*
 ```
 var group = L.featureGroup();
 
@@ -103,6 +103,13 @@ var mark = L.marker([0,0], {...})
 then function `.setMarker(mark)` try set coordinates of the marker on center *L.Path*
 
 ## runlay
+
+`Leaflet` allows users to control which layers they see on your map through *L.control.layers()* ((see tutorial)[http://leafletjs.com/examples/layers-control/]). Here this functional is extended with *runlay*.
+
+1. As usual make base and over layers with *L.TileLayer* and *L.LayerGroup*, respectively:
+```
+```
+
 
 ## legend
 
