@@ -142,16 +142,16 @@ You will have same control with two additional items:
 
 ## legend
 
-function `agrLegend()` for create Aggregation Legend
+function `agrLegend()` for create Aggregation Legend — inside it create *L.Control* object
 ```
 myGeo.agrLegend( {
    "Groups":group
-  ,"Lines":lines
+  ,"Lines":lines  // another L.FeatureGroup
 }, { ... } )
 ```
 first argument is:
 
-* along L.FeatureGroup overlay for create legend or
+* along *L.FeatureGroup* overlay for create legend or
 * array { "name" : featureGroup ... } if into legend needed the &lt;H4> name of block items or
 * array [ ... ] of L.FeatureGroup's (without block names)
 
@@ -160,10 +160,19 @@ second argument is not required = options array {...} for *L.control*, ex: { pos
 * default options: `position: 'bottomright'`
 * adding options: `classAgrLegend: 'string'` for .addClass() to div-container into *L.control*
 
+In the legend there will be objects added to these *L.FeatureGroup* with `legendItem` property. Objects can be with .setMarker() or without (marker)[#markers]
 
-You can несколько объектов содним именем
+You can create several objects with the same `legendItem`, then in the legend there will be one item for all of them.
 
+It is possible to add a group to the map and add objects to the group after the legend was generated, that is, execute `group.addTo(myMap);` and `L.rectangle([[51.49,-0.06],[51.52,-0.04]]).addTo(group);` after `myGeo.agrLegend(...)`
 
+One remark: if you create object with marker then first you do `.setMarker(m)` and then `.addTo(group)`, ex:
+```
+ L.polygon([[51.509, -0.08],[51.503, -0.06],[51.51, -0.047]],{
+	legendItem: 'Cafe'
+ }).setMarker(mark)
+   .addTo(group); /// addTo() group AFTER setMarker() !!!!! [when do it after .agrLegend()]
+```
 
 ## fullWin
 
