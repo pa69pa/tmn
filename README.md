@@ -142,6 +142,25 @@ You will have same control with two additional items:
 
 ## legend
 
+function `agrLegend()` for create Aggregation Legend
+```
+myGeo.agrLegend( {
+   "Groups":group
+  ,"Lines":lines
+}, { ... } )
+```
+first argument is:
+
+* along L.FeatureGroup overlay for create legend or
+* array { "name" : featureGroup ... } if into legend needed the &lt;H4> name of block items or
+* array [ ... ] of L.FeatureGroup's (without block names)
+
+second argument is not required = options array {...} for *L.control*, ex: { position: 'bottomleft' }, with:
+
+* default options: `position: 'bottomright'`
+* adding options: `classAgrLegend: 'string'` for .addClass() to div-container into *L.control*
+
+
 You can несколько объектов содним именем
 
 
