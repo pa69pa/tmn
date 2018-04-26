@@ -59,7 +59,7 @@ var myMap = L.map('mapid').setView([51.505, -0.09], 13);
 ```
 2. And after make *tmn.init()* by giving him **myMap**
 ```
-var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend("my Points");
+var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend(group);
 ```
  — what is *.nav* see in chapter [runlay](#runlay)<br>
  — what is *.agrLegend* see in chapter [legend](#legend)
