@@ -66,6 +66,12 @@ var myGeo = tmn.init(myMap,{...}).nav(baselay, overlay, runlay).agrLegend("my Po
 
 second argument for *tmn.init()* can be array-object (not required) — see in chapter [fullWin](#fullWin)
 
+object **myGeo** as a result has properties:
+* myGeo.map = L.Map — in this example *myMap*
+* myGeo.div = jQuery object $(div) where map is created — in this example $('#mapid')
+* myGeo.isBase = true/false — current state of the fullWin map
+and others
+
 ## markers
 
 The `Leaflet` object *L.Path* is extended by method `.setMarker(L.Marker)`. The goal is to equip objects *L.Polyline*, *L.Polygon*, *L.Rectangle*, *L.Circle* with the ability to have markers\pictures to identify the object on the map and use the same markers in the map legend. Two step:
@@ -129,11 +135,11 @@ var runlay = {
 
 myGeo.nav(baselay, overlay, runlay, arr);
 ```
-not required argument *arr* is options array {} for L.control.layers, ex: {position:'topleft'}
+not required argument *arr* is options array {...} for *L.control.layers*, ex: { position: 'topleft' }
 
 You will have same control with two additional items:
 * "go to Group" — will run myMap.flyToBounds(b) — where b = bounds of the *group* (therefore it is better to use L.FeatureGroup instead of L.LayerGroup)
-* "start Func" —  the specified function will be performed — context *this* of function is *myGeo* object
+* "start Func" —  the specified function will be performed — context *this* of function is *myGeo* object ([see init](#init))
 
 ## legend
 
