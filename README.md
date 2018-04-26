@@ -127,11 +127,13 @@ var runlay = {
     ,"start Func": myFunc // any JavaScript function
 };
 
-myGeo.nav(baselay, overlay, runlay);
+myGeo.nav(baselay, overlay, runlay, arr);
 ```
+not required argument *arr* is options array {} for L.control.layers, ex: {position:'topleft'}
+
 You will have same control with two additional items:
 * "go to Group" — will run myMap.flyToBounds(b) — where b = bounds of the *group* (therefore it is better to use L.FeatureGroup instead of L.LayerGroup)
-* "start Func" —  the specified function will be performed
+* "start Func" —  the specified function will be performed — context *this* of function is *myGeo* object
 
 ## legend
 
