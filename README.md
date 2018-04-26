@@ -88,12 +88,12 @@ L.circle([51.5,-0.11], 500, {
 		,fillColor: '#f03'
 		,fillOpacity: 0.5
 		,legendItem: 'Cafe'
-	}).addTo(group).bindPopup("I am a cafe.").setMarker(mark);
+	}).addTo(group).bindPopup("I am a cafe").setMarker(mark);
 ```
 
 Property *legendItem* can contain html:
 ```
-   legendItem: 'Lorem &lt;ipsum>&lt;br>dolor sit amet'
+   legendItem: 'Lorem <i>ipsum><i><br>dolor sit amet'
 ```
 
 You can set the marker coordinates to zero:
@@ -102,6 +102,7 @@ var mark = L.marker([0,0], {...})
 ```
 then function `.setMarker(mark)` try set coordinates of the marker on center *L.Path*
 
+## runlay
 
 ## legend
 
