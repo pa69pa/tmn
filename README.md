@@ -176,13 +176,23 @@ One remark: if you create object with marker then first you do `.setMarker(m)` a
 
 ## fullWin
 
-second argument for *tmn.init()* can be array-object with:
+Another way for *tmn.init()* with two array-object as arguments is:
+```
+var myBigGeo = tmn.init(
+	 { center:[50.15238872281402,86.29184584424449], zoom:12 }  // for L.map()
+	,{ funcBefore:showMap, funcOnClose:hideMap, anim:'left' }   // for tmn.init()
+);
+```
+It's create div with style="width:100%;height:100vh" as container and *L.Map* inside. Next you can access the object *L.Map* as `myBigGeo.map`
+
+Second argument for *tmn.init()* can be (not required) array-object with:
 
 |key|default|desc|
 |---|-------|----|
 |funcBefore|none|function run on start show full-win map|
 |funcOnClose|none|function run on close full-win map|
-|anim|'hide'|animation action for show full-win map — on default full-win map manifested from the transparent — with value 'left' or right' full-win map will appear to be pulled out on the left or right|
+|anim|'fade'|animation action for show full-win map — on default full-win map manifested from the transparent — with value 'left' or right' full-win map will appear to be pulled out on the left or right|
+|close|null|icon for button close full-win map<br>— default = null (without icon<br> = '[X]' for easy icon
 
 
 ## can.js
