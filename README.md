@@ -160,7 +160,7 @@ second argument is not required = options array {...} for *L.control*, ex: { pos
 * default options: `position: 'bottomright'`
 * adding options: `classAgrLegend: 'string'` for .addClass() to div-container into *L.control*
 
-In the legend there will be objects added to these *L.FeatureGroup* with `legendItem` property. Objects can be with .setMarker() or without (marker)[#markers]
+In the legend there will be objects added to these *L.FeatureGroup* with `legendItem` property. Objects can be with .setMarker() or without [marker](#markers)
 
 You can create several objects with the same `legendItem`, then in the legend there will be one item for all of them.
 
