@@ -104,12 +104,25 @@ then function `.setMarker(mark)` try set coordinates of the marker on center *L.
 
 ## runlay
 
-`Leaflet` allows users to control which layers they see on your map through *L.control.layers()* ((see tutorial)[http://leafletjs.com/examples/layers-control/]). Here this functional is extended with *runlay*.
+`Leaflet` allows users to control which layers they see on your map through *L.control.layers()* ([see tutorial](http://leafletjs.com/examples/layers-control/)). Here this functional is extended with *runlay*.
 
 1. As usual make base and over layers with *L.TileLayer* and *L.LayerGroup*, respectively:
 ```
-```
+var grayscale = L.tileLayer(mapUrl, {id: 'MapID', attribution: mapAttribution}),
+    streets   = L.tileLayer(mapUrl, {id: 'MapID', attribution: mapAttribution});
 
+var baselay = {
+    "Grayscale": grayscale,
+    "Streets": streets
+};
+
+var overlay = {
+    "Group": group // this *L.FeatureGroup* created in chapter [markers](#markers)
+};
+```
+2. And can create third object for run functionals and make **.nav()**
+```
+```
 
 ## legend
 
