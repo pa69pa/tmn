@@ -30,7 +30,7 @@ console.log( tmn.icons().x )
 ```
 — see run it [here](https://pa69pa.github.io/tmn)
 
-Before init we can change this set. Ex:
+Before init you can change this set. Ex:
 ```
 tmn.icons( { x:'<img src="/img/x.png">', play:'>'} )
 ```
@@ -90,9 +90,23 @@ L.circle([51.5,-0.11], 500, {
 		,legendItem: 'Cafe'
 	}).addTo(group).bindPopup("I am a cafe.").setMarker(mark);
 ```
-We can несколько объектов содним именем
 
-[0,0] как координаты маркера
+Property *legendItem* can contain html:
+```
+   legendItem: 'Lorem &lt;ipsum>&lt;br>dolor sit amet'
+```
+
+You can set the marker coordinates to zero:
+```
+var mark = L.marker([0,0], {...})
+```
+then function `.setMarker(mark)` try set coordinates of the marker on center *L.Path*
+
+
+## legend
+
+You can несколько объектов содним именем
+
 
 
 ## fullWin
@@ -113,7 +127,7 @@ If object **tmn.icons()** has value begining with `&`, then *can.js* load in bac
 
 If you replace all lines starting with `&` in the array **tmn.icons()**, then this font and style `.mico` be loaded will not.
 
-If, on the contrary, you wanted at the same time to add some more number of icons for your own needs, then we list the code of their glyphs after the query in the src script:
+If, on the contrary, you wanted at the same time to add some more number of icons for your own needs, then you list the code of their glyphs after the query in the src script:
 ```
 <script src="can.js?&#xE0CD;&#xE315;&#xE314;&#xE5D8;&#xE5D2;"></script>
 ```
